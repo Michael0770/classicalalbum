@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ass3.Models.Albums>
+@Scripts.Render("~/Scripts/myScript1.js")
+
+@{
+    ViewBag.Title = "Albums";
+}
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by Album Name: &ensp; @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table" id="data">
+    <tr>
+        <th>
+            @Html.ActionLink("Album Name", "Index", new { sortOrder = ViewBag.NameSortParm})
+        </th>
+        <th>
+            @Html.ActionLink("Year the Album was released", "Index", new { sortOrder = ViewBag.DateSortParm })
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.albumName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.albumYear)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.albumID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.albumID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.albumID })
+        </td>
+    </tr>
+}
+
+</table>

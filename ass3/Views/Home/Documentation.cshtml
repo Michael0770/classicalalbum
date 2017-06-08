@@ -1,0 +1,173 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Documentation";
+}
+
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/sunny/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion({ collapsible: true, heightStyle: "content" });
+        });
+    </script>
+</head>
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<div class="documentation" id="accordion">
+    <h2>Assignment Information</h2>
+    <div>
+        <table class="tg">
+            <colgroup>
+                <col style="width: 200px">
+                <col style="width: 500px">
+            </colgroup>
+            <tr>
+                <td class="tg-left">Name:  </td>
+                <td class="tg-rigth"><a href="mailto:hli158@student.monash.edu" title="Email me">Haomai Li</a></td>
+            </tr>
+            <tr>
+                <td class="tg-left">Student ID:  </td>
+                <td class="tg-rigth">25367974</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Unit Name:  </td>
+                <td class="tg-rigth">Internet Applications Development</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Unit Provider:  </td>
+                <td class="tg-rigth">Monash University, The Caulfield School of Information Technology</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Assignment Number:  </td>
+                <td class="tg-rigth">3</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Date of Submission:  </td>
+                <td class="tg-rigth">23 October 2015</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Tutor Name:  </td>
+                <td class="tg-rigth">Jian</td>
+            </tr>
+        </table>
+        <br />
+        <table class="docTable">
+            <colgroup>
+                <col style="width: 500px">
+                <col style="width: 500px">
+            </colgroup>
+            <tr>
+                <td>
+                    Design Report:
+                </td>
+                <td>
+                    Specifications:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="~/resources/DesignReportAss3.pdf" title="Design Report" class="myButton">Download Report</a>
+                </td>
+                <td>
+                    <a href="~/resources/Assignment3.pdf" title="Assignment Specifications" class="myButton">Download Specifications</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2>Images Information</h2>
+    <div>
+        <table class="tg">
+            <colgroup>
+                <col style="width: 200px">
+                <col style="width: 500px">
+            </colgroup>
+            <tr>
+                <th><h3 style="text-align:center">Image</h3></th>
+                <th><h3 style="text-align:center">Copyright</h3></th>
+            </tr>
+            <tr>
+                <td class="tg-left"><img src="~/images/image01.jpg" style="width:200px" /></td>
+                <td class="tg-rigth">Copyright: <a href="www.michaeljackson.com">michael jackson</a>. All rights reserved.</td>
+            </tr>
+            <tr>
+                <td class="tg-left"><img src="~/images/logo.gif" style="width:200px" /></td>
+                <td class="tg-rigth">Copyright: <a href="www.adele.com">Adele</a>. All rights reserved.</td>
+            </tr>
+        </table>
+    </div>
+    <h2>MVC Functionality</h2>
+    <div>
+        <table class="tg">
+            <colgroup>
+                <col style="width: 200px">
+                <col style="width: 500px">
+            </colgroup>
+            <tr>
+                <th><h3 style="text-align:center">Function</h3></th>
+                <th><h3 style="text-align:center">Pages</h3></th>
+            </tr>
+            <tr>
+                <td class="tg-left">Sorting</td>
+                <td class="tg-rigth">Albums</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Search</td>
+                <td class="tg-rigth">Albums, States, Users</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Edit</td>
+                <td class="tg-rigth">Albums, States, Users</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Details</td>
+                <td class="tg-rigth">Albums, States, Users</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Delete</td>
+                <td class="tg-rigth">Albums, States, Users</td>
+            </tr>
+        </table>
+    </div>
+    <h2>jQuery Functionality</h2>
+    <div>
+        <table class="tg">
+            <colgroup>
+                <col style="width: 200px">
+                <col style="width: 500px">
+            </colgroup>
+            <tr>
+                <th><h3 style="text-align:center">Function</h3></th>
+                <th><h3 style="text-align:center">Pages</h3></th>
+            </tr>
+            <tr>
+                <td class="tg-left">Row Highlighting</td>
+                <td class="tg-rigth">Albums, Users</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Alternate Row Colouring</td>
+                <td class="tg-rigth">Albums, Users</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Date Picker</td>
+                <td class="tg-rigth">Users (Create)</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Tooltip</td>
+                <td class="tg-rigth">Users (Create)</td>
+            </tr>
+            <tr>
+                <td class="tg-left">Accordion</td>
+                <td class="tg-rigth">Documentation</td>
+            </tr>
+        </table>
+    </div>
+</div>
