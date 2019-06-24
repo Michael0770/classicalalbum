@@ -1,0 +1,2 @@
+# classicalalbum
+This aps.net website is designed for those people who love classical music and want to get some information about classical album.  Main functions of the website: Show album`s information, search users and albums based on their name, edit the information about records,  delete records from the website, assign album to user`s favorite album and allow users download this report and assignment specifications.
